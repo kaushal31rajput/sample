@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: "{{ .Release.Name }}-nginx"
 spec:
+  namespace: default
   replicas: {{ .Values.replica }}
   selector:
     matchLabels:
