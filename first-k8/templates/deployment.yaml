@@ -2,8 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: "{{ .Release.Name }}-nginx"
-spec:
   namespace: default
+spec:
   replicas: {{ .Values.replica }}
   selector:
     matchLabels:
